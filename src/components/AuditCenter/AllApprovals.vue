@@ -13,8 +13,8 @@
       <el-table-column prop="status" label="审批状态"> </el-table-column>
       <el-table-column fixed="right" label="操作" width="200">
         <template slot-scope="scope">
-          <el-button type="text" size="small" @click="handleClick(scope.row)">审批</el-button>
-          <el-button type="text" size="small" @click="handleClick(scope.row)">催办</el-button>
+          <el-button type="text" size="small" @click="approve(scope.row)">审批</el-button>
+          <el-button type="text" size="small" @click="urge(scope.row)">催办</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -54,6 +54,12 @@ export default {
       });
     },
     handleClick(row) {
+      console.log(row);
+    },
+    approve(row) {
+      console.log(row);
+    },
+    urge(row) {
       console.log(row);
     },
   },
